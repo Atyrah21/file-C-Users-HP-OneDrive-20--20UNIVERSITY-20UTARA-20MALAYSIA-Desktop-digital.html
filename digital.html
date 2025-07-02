@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<title>Skrol Warisan</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      scroll-behavior: smooth;
+      font-family: 'Segoe UI', sans-serif;
+      height: 100%;
+      background: #000;
+      color: white;
+    }
+
+    .section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .section:nth-child(odd) { background: #111; }
+    .section:nth-child(even) { background: #222; }
+
+    .section img {
+      max-width: 85%;
+      max-height: 55vh;
+      border-radius: 16px;
+      margin-bottom: 25px;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+      transition: transform 0.5s;
+    }
+
+    .section:hover img { transform: scale(1.03); }
+
+    .title {
+      font-size: 30px;
+      font-weight: bold;
+      color: #f39c12;
+      margin-bottom: 10px;
+    }
+
+    .desc {
+      font-size: 17px;
+      max-width: 600px;
+      line-height: 1.8;
+      color: #f1f1f1;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .menu-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #f39c12;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      z-index: 999;
+    }
+
+    .menu-btn:hover {
+      background-color: #e67e22;
+    }
+
+    iframe {
+      margin-top: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+<body>
+
+<!-- LAMAN DEPAN -->
+<!-- Dalam bahagian landing -->
+<div id="landing" style="height: 100vh; background: linear-gradient(to right, #111, #222); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px;">
+  <h1 style="font-size: 42px; color: #f39c12; margin-bottom: 20px;">🇲🇾 Skrol Warisan</h1>
+  <p style="color: #eee; font-size: 18px; max-width: 600px; margin-bottom: 40px;">
+    Selami seni dan budaya warisan tidak ketara Malaysia secara digital dalam gaya skrol moden yang menyeronokkan! Klik butang di bawah untuk mula menjelajah.
+  </p>
+  <button onclick="enterSite()" style="padding: 15px 30px; font-size: 18px; border: none; border-radius: 30px; background-color: #f39c12; color: white; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+    📲 Masuk Sekarang
+  </button>
+</div>
+
+
+<!-- KANDUNGAN UTAMA: Sembunyi dulu -->
+<div id="main-content" style="display: none;">
+
+  <!-- MUSIC -->
+  <div class="section" style="background:#000;">
+    <div class="title">🎼 Traditional Gamelan Music</div>
+    <div class="desc">Enjoy the calming traditional Gamelan melody while exploring Malaysia's intangible heritage.</div>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/45MLUc_TiPE?rel=0" allowfullscreen allow="autoplay"></iframe>
+  </div>
+
+<!-- BATIK KELANTAN -->
+<div class="section">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Membatik_di_Kelantan.jpg" alt="Batik Kelantan" style="max-height: 40vh;">
+  <img src="https://wanitakelantan.com/wp-content/uploads/2016/03/batik.jpg" alt="Batik Making Process" style="margin-top:20px; max-height:40vh;">
+  <div class="title">🧵 Batik Kelantan</div>
+  <div class="desc">
+    Batik Kelantan is a traditional textile art known for its bright colours and floral motifs, created using canting (fine wax drawing) and block stamping techniques.
+    <br><br>
+    <strong>📍 Origin:</strong> Kelantan, East Coast of Malaysia<br>
+    <strong>🎯 Purpose:</strong> Worn during cultural ceremonies, daily life, and official events<br>
+    <strong>🎨 Technique:</strong> Canting (wax drawing) and block stamping using natural dyes<br>
+    <strong>💡 Interesting Fact:</strong> Each pattern reflects traditional values, beliefs, and the identity of the Kelantanese community.
+  </div>
+</div>
+
+  <!-- WAU BULAN -->
+  <div class="section">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Wau_Bulan.jpg/640px-Wau_Bulan.jpg" alt="Wau Bulan">
+    <div class="title">🎏 Wau Bulan</div>
+    <img src="https://icf.newscdn.net/publisher-c1a3f893382d2b2f8a9aa22a654d9c97/2020/03/1e0b1600165fadc2dd96e45fbb24a8ec.jpg=s600" alt="Wau Bulan Flying" style="margin-top:20px; max-height:40vh;">
+    <div class="desc">
+      A traditional kite from Kelantan, known for its crescent moon shape and unique humming sound made by its bow when flown in strong winds.
+      <br><br>
+      <strong>📍 Origin:</strong> Kelantan, Malaysia<br>
+      <strong>🎯 Purpose:</strong> Flown after harvest season during festivals or kite competitions. It also represents peace and gratitude in Malay culture.<br>
+      <strong>💡 Interesting Fact:</strong> The Wau Bulan appears on Malaysia's 50 cent coin and MAS airline logo as a national cultural icon.
+    </div>
+  </div>
+
+ <!-- MAK YONG -->
+  <div class="section">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Mak_Yong_dance.jpg/640px-Mak_Yong_dance.jpg" alt="Mak Yong">
+    <div class="title">🎭 Mak Yong</div>
+    <img src="https://www.freemalaysiatoday.com/_next/image?url=https%3A%2F%2Fmedia.freemalaysiatoday.com%2Fwp-content%2Fuploads%2F2021%2F04%2Fmak-yong-unesco-pic-080421-1.jpg&w=1080&q=75" alt="Mak Yong Performance" style="margin-top:20px; max-height:40vh;">
+    <div class="desc">
+      A traditional Malay dance-drama that combines acting, singing, dancing, and ritual elements. It is a form of storytelling theatre rooted in oral tradition.
+      <br><br>
+      <strong>📍 Origin:</strong> Patani (Southern Thailand) and popularized in Kelantan, Malaysia<br>
+      <strong>🎯 Purpose:</strong> Performed as entertainment, healing rituals, and spiritual storytelling with strong female roles.<br>
+      <strong>🏆 UNESCO Status:</strong> Recognized as Intangible Cultural Heritage in Need of Urgent Safeguarding (2005)<br>
+      <strong>💡 Interesting Fact:</strong> Traditionally, the performers were all women—even playing male roles!
+    </div>
+  </div>
+
+  <!-- SILAT MELAYU -->
+  <div class="section">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Silat_seni.jpg/640px-Silat_seni.jpg" alt="Silat Melayu">
+    <img src="https://utusantv.com/wp-content/uploads/2024/01/silat-gayong.jpg" alt="Silat Demonstration" style="margin-top:20px; max-height:40vh; border-radius: 16px; box-shadow: 0 12px 24px rgba(0,0,0,0.5);">
+    <div class="title">🥋 Silat Melayu</div>
+    <div class="desc">
+      Silat is a traditional Malay martial art that blends combat techniques, dance, and spiritual practices. It symbolizes strength, discipline, and cultural pride.
+      <br><br>
+      <strong>📍 Origin:</strong> Practiced across Malaysia, Indonesia, and Southern Thailand<br>
+      <strong>🎯 Purpose:</strong> Used for self-defense, cultural performances, and ceremonial events like weddings and royal parades<br>
+      <strong>🌀 Style:</strong> Combines hand-to-hand combat, weapon use (keris, tongkat), and graceful movements<br>
+      <strong>💡 Interesting Fact:</strong> Silat is often performed with live music using traditional instruments like the gendang and serunai.
+    </div>
+  </div>
+
+  <!-- WAYANG KULIT -->
+  <div class="section">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Wayang_Kulit_Perlis.jpg/640px-Wayang_Kulit_Perlis.jpg" alt="Wayang Kulit">
+    <img src="https://dewanbudaya.jendeladbp.my/app/uploads/sites/5/2023/04/070391300_1674225772-shutterstock_701666278-1024x768.jpg" alt="Wayang Kulit Performance" style="margin-top:20px; max-height:40vh; border-radius: 16px; box-shadow: 0 12px 24px rgba(0,0,0,0.5);">
+    <div class="title">🕯️ Wayang Kulit</div>
+    <div class="desc">
+      A traditional shadow puppet theatre using intricately carved leather puppets and narrated stories from folklore and epics, accompanied by live music.
+      <br><br>
+      <strong>📍 Origin:</strong> Kelantan, Malaysia (also in Patani, Thailand & Indonesia)<br>
+      <strong>🎯 Purpose:</strong> Used for storytelling, spiritual rituals, and entertainment<br>
+      <strong>🎶 Instruments:</strong> Accompanied by gong, serunai, and gendang<br>
+      <strong>💡 Interesting Fact:</strong> The main storyteller, known as the Tok Dalang, voices all characters and is considered both an artist and a spiritual leader.
+    </div>
+  </div>
+
+  <!-- DIKIR BARAT -->
+  <div class="section">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Dikir_Barat_Performance.jpg/640px-Dikir_Barat_Performance.jpg" alt="Dikir Barat Performance">
+    <img src="https://www.utusan.com.my/wp-content/uploads/sastera-1-1.jpg" alt="Dikir Barat Group" style="margin-top:20px; max-height:40vh; border-radius: 16px; box-shadow: 0 12px 24px rgba(0,0,0,0.5);">
+    <div class="title">🎶 Dikir Barat</div>
+    <div class="desc">
+      A traditional Malay musical form combining singing, choral chanting, and rhythmic clapping, popular in Kelantan and Terengganu.
+      <br><br>
+      <strong>📍 Origin:</strong> Kelantan, Malaysia (also performed in Terengganu)<br>
+      <strong>🎯 Purpose:</strong> Performed during weddings, social gatherings, and festivals to foster community spirit<br>
+      <strong>🎼 Style:</strong> Led by a “tok juara” (lead singer), group responds in chorus with fast-paced clapping and footwork<br>
+      <strong>💡 Interesting Fact:</strong> Performances can involve improvisation, satire, and humour—often commenting on daily life or social issues.
+    </div>
+  </div>
+ <!-- Closing Footer -->
+  <div style="background: #111; padding: 60px 20px; text-align: center;">
+    <h2 style="color: #f39c12; font-size: 28px; margin-bottom: 20px;">📜 End of the Heritage Scroll</h2>
+    <p style="color: #ccc; font-size: 16px; max-width: 600px; margin: 0 auto 30px;">
+      Each cultural element showcased here is more than just a relic of the past — it's a heartbeat of our Malaysian identity. May this Heritage Scroll spark pride and awareness in preserving our intangible traditions for generations to come.
+    </p>
+    <p style="color: #888; font-size: 14px; margin-top: 40px;">
+      Created by <strong>Nur Atyrah binti Che Hamran</strong> | SALNK2313 Project <br>
+      INFORMATION TECHNOLOGY IN APPLIED HISTORY © 2025
+    </p>
+  </div>
+
+</div>
+
+
+</div>
+
+<script>
+  function enterSite() {
+    document.getElementById('landing').style.display = 'none';
+    document.getElementById('main-content').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+ 
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
